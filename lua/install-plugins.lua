@@ -18,21 +18,47 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    { 'catppuccin/nvim', name = 'catppuccin' },
-    { 'VonHeikemen/lsp-zero.nvim',          branch = 'v3.x' },
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/nvim-cmp' },
-    { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        { 'catppuccin/nvim',                  name = 'catppuccin' },
+        { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+        { 'williamboman/mason.nvim' },
+        { 'williamboman/mason-lspconfig.nvim' },
+        { 'neovim/nvim-lspconfig' },
+        { 'hrsh7th/cmp-nvim-lsp' },
+        {
+            'hrsh7th/nvim-cmp',
+            dependencies = { 'L3MON4D3/LuaSnip' }
+        },
+        { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+        {
+            'nvim-telescope/telescope.nvim',
+            dependencies = { 'nvim-lua/plenary.nvim' }
+        },
+        {
+            "nvim-treesitter/nvim-treesitter",
+            build = ":TSUpdate"
+        },
+        {
+            'nvim-lualine/lualine.nvim',
+        },
+        { 'lewis6991/gitsigns.nvim' },
     },
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-})
+        ui = {
+            icons = {
+                cmd = "⌘",
+                config = "🛠",
+                event = "📅",
+                ft = "📂",
+                init = "⚙",
+                keys = "🗝",
+                plugin = "🔌",
+                runtime = "💻",
+                require = "🌙",
+                source = "📄",
+                start = "🚀",
+                task = "📌",
+                lazy = "💤 ",
+            },
+        }
+    }
+)
