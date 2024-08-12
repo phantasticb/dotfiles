@@ -29,5 +29,10 @@ require('lazy').setup({
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+    },
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
 })
