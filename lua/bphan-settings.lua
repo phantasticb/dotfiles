@@ -1,6 +1,6 @@
 -- Set colorscheme
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('tokyodark')
+vim.cmd.colorscheme('catppuccin-mocha')
 
 -- General vim settings
 vim.opt.number = true

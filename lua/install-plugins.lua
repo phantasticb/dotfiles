@@ -18,7 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    { 'tiagovla/tokyodark.nvim' },
+    { 'catppuccin/nvim', name = 'catppuccin' },
     { 'VonHeikemen/lsp-zero.nvim',          branch = 'v3.x' },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
