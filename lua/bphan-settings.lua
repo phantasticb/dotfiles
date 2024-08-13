@@ -10,5 +10,17 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.showmode = false
+vim.opt.cursorline = true
 
 vim.g.mapleader = ' '
+
+-- Special functions
+local function toggleNumGutter()
+    if vim.o.number then vim.opt.number = false else vim.opt.number = true end
+    if vim.o.signcolumn == 'yes' then
+        vim.opt.signcolumn = 'no'
+    else
+        vim.opt.signcolumn = 'yes'
+    end
+end
+vim.keymap.set('n', '<leader>h', toggleNumGutter)

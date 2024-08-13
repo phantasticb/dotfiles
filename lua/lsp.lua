@@ -22,11 +22,19 @@ require('mason-lspconfig').setup({
             require('lspconfig').lua_ls.setup({
                 settings = {
                     Lua = {
-                        diagnostics = {
-                            globals = { 'vim' }
-                        }
                     }
-                }
+                },
+                -- all this is to shut lua_ls up for nvim config
+                on_init = function(client)
+                    -- Apply neovim specific settings
+                    local lua_opts = lsp_zero.nvim_lua_ls()
+
+                    client.config.settings.Lua = vim.tbl_deep_extend(
+                        'force',
+                        client.config.settings.Lua,
+                        lua_opts.settings.Lua
+                    )
+                end,
             })
         end,
         pyright = function()
