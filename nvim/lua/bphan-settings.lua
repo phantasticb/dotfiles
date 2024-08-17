@@ -24,6 +24,5 @@ local function toggleNumGutter()
     end
 end
 vim.keymap.set('n', '<leader>h', toggleNumGutter)
-vim.keymap.set('n', '<leader>e', ':Lex<cr>:vert resize 40<cr>', { silent = true })
 vim.keymap.set('n', '<leader>b', ':ls<cr>:b', { silent = true })
 
