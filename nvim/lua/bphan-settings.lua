@@ -14,8 +14,8 @@ vim.opt.cursorline = true
 
 vim.g.mapleader = ' '
 -- Keymaps
-vim.keymap.set('n', '<leader>p', ':bN<cr>', { silent = true })
-vim.keymap.set('n', '<leader>n', ':bn<cr>', { silent = true })
+vim.keymap.set('n', '<leader>p', '<cmd>bN<cr>', { silent = true })
+vim.keymap.set('n', '<leader>n', '<cmd>bn<cr>', { silent = true })
 
 -- Special functions
 local function toggleNumGutter()
@@ -27,5 +27,5 @@ local function toggleNumGutter()
     end
 end
 vim.keymap.set('n', '<leader>h', toggleNumGutter)
-vim.keymap.set('n', '<leader>b', ':ls<cr>:b', { silent = true })
+vim.keymap.set('n', '<leader>b', '<cmd>ls<cr><cmd>b', { silent = true })
 
