@@ -1,6 +1,7 @@
 -- Set colorscheme
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('catppuccin-mocha')
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "#dd22dd", bold = true })
 
 -- General vim settings
 vim.opt.number = true
