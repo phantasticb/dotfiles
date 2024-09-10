@@ -62,6 +62,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
     },
+    preselect = cmp.PreselectMode.None,
     mapping = cmp.mapping.preset.insert({
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
